@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 85%;
+  align-items: center;
+  margin: 0 auto;
+}
+
+#today h2 {
+  text-transform: uppercase;
+}
+#logo {
+  background-image: image('img/cubs_logo.png');
+}
+
+.game {
+  display: flex;
+}
