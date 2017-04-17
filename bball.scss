@@ -94,10 +94,6 @@ h3 {
 .time h1, .WL h1{
   margin: 10px;
 }
-.time {
-
-}
-
 @mixin team-color($color) {
   border: solid 2px $color;
   background-color: desaturate(lighten($color, 30%), 55%);
