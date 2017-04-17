@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Passion+One');
+
+$font-stack: 'Passion One', Verdana, sans-serif;
+$h1-size: 72px;
+$h2-size: 48px;
+$h3-size: 28px;
+$blue-team: #0E3386;
+$red-team: red;
+$navy-team: #0C2340;
+$yellow-team: #FDB827;
+$black-team: black;
+$orange-team: #FD5A1E;
+$green-team: #003831;
+
+h1 {
+  font-size: $h1-size;
+}
+h2 {
+  font-size: $h2-size;
+}
+h3 {
+  font-size: $h3-size;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  width: 75%;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+  font-family: $font-stack;
+  text-transform: uppercase;
+}
+
+#heading {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  img {
+    height: auto;
+    width: auto;
+    max-width: 175px;
+    max-height: 175px;
+  }
+  h1 {
+    padding: 15px;
+  }
+  @media (max-width: 950px){
+    h1 {
+      font-size: $h2-size;
+    }
+  }
+  @media (max-width: 750px){
+    h1 {
+      font-size: $h2-size - 12px;
+    }
+    img {
+      max-width: 100px;
+      max-height: 100px;
+    }
+  }
+    @media (max-width: 525px){
+      img {
+        max-width: 50px;
+        max-height: 50px;
+      }
+    }
+}
+
+#logo, #date {
+  width: 50%;
+}
+#today, #yesterday {
+  width: 400px;
+  @media (max-width: 525px){
+    h2 {
+      font-size: $h3-size;
+    }
+  }
+}
+.game {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: solid 2px black;
+  padding: 15px;
+  text-align: center;
+}
+.time h1, .WL h1{
+  margin: 10px;
+}
+.time {
+
+}
+
+@mixin team-color($color) {
+  border: solid 2px $color;
+  background-color: desaturate(lighten($color, 30%), 55%);
+  margin: 5px;
+}
+
+.teams {
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+  width: 100%;
+  .blue-team {
+    @include team-color($blue-team);
+  }
+  .navy-team {
+    @include team-color($navy-team);
+  }
+  .black-team {
+    @include team-color($black-team);
+  }
+  .red-team {
+    @include team-color($red-team);
+  }
+  .yellow-team {
+    @include team-color($yellow-team);
+  }
+  .green-team {
+    @include team-color($green-team);
+  }
+  .orange-team {
+    @include team-color($orange-team);
+  }
+}

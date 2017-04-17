@@ -1,19 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Passion+One');
+
 .container {
   display: flex;
   justify-content: space-around;
-  flex-direction: column;
-  width: 85%;
+  flex-flow: row wrap;
+  width: 75%;
   align-items: center;
   margin: 0 auto;
-}
-
-#today h2 {
+  text-align: center;
+  font-family: 'Passion One', Verdana, sans-serif;
   text-transform: uppercase;
 }
-#logo {
-  background-image: image('img/cubs_logo.png');
+
+#heading img{
+  height: auto;
+  width: auto;
+  max-width: 175px;
+  max-height: 175px;
 }
 
+#heading {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+#logo, #date {
+  width: 50%;
+}
 .game {
   display: flex;
+  align-items: center;
+
+}
+#today, #yesterday {
+  width: 400px;
+}
+.game {
+  background-color: white;
+  border: solid 2px black;
+  padding: 15px;
+}
+.teams {
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+  width: 100%;
+}
+h2 {
+  text-transform: uppercase;
+}
+#heading h1 {
+  padding: 15px;
+  text-transform: uppercase;
+}
+@media (max-width: 950px) {
+    #heading h1 {
+      font-size: 48px;
+    }
+}
+@media (max-width: 750px) {
+    #heading h1 {
+      font-size: 36px;
+    }
+    #heading img {
+      max-width: 100px;
+      max-height: 100px;
+    }
+}
+@media (max-width: 525px) {
+    #heading img {
+      max-width: 50px;
+      max-height: 50px;
+    }
+}
+h1 {
+  font-size: 72px;
+}
+h2 {
+  font-size: 48px;
+}
+h3{
+  font-size: 28px;
+}
+.home, .away {
+  margin: 5px;
+}
+.time h1, .WL h1{
+  margin: 5px;
+}
+.away {
+  background-color: gray;
+}
+.home {
+  background-color: #002F6C;
 }

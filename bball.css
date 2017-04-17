@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css?family=Passion+One");
+h1 {
+  font-size: 72px; }
+
+h2 {
+  font-size: 48px; }
+
+h3 {
+  font-size: 28px; }
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  width: 75%;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Passion One", Verdana, sans-serif;
+  text-transform: uppercase; }
+
+#heading {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center; }
+  #heading img {
+    height: auto;
+    width: auto;
+    max-width: 175px;
+    max-height: 175px; }
+  #heading h1 {
+    padding: 15px; }
+  @media (max-width: 950px) {
+    #heading h1 {
+      font-size: 48px; } }
+  @media (max-width: 750px) {
+    #heading h1 {
+      font-size: 36px; }
+    #heading img {
+      max-width: 100px;
+      max-height: 100px; } }
+  @media (max-width: 525px) {
+    #heading img {
+      max-width: 50px;
+      max-height: 50px; } }
+
+#logo, #date {
+  width: 50%; }
+
+#today, #yesterday {
+  width: 400px; }
+  @media (max-width: 525px) {
+    #today h2, #yesterday h2 {
+      font-size: 28px; } }
+
+.game {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: solid 2px black;
+  padding: 15px;
+  text-align: center; }
+
+.time h1, .WL h1 {
+  margin: 10px; }
+
+.teams {
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+  width: 100%; }
+  .teams .blue-team {
+    border: solid 2px #0E3386;
+    background-color: #7b8cb2;
+    margin: 5px; }
+  .teams .navy-team {
+    border: solid 2px #0C2340;
+    background-color: #637182;
+    margin: 5px; }
+  .teams .black-team {
+    border: solid 2px black;
+    background-color: #4d4d4d;
+    margin: 5px; }
+  .teams .red-team {
+    border: solid 2px red;
+    background-color: #e3b5b5;
+    margin: 5px; }
+  .teams .yellow-team {
+    border: solid 2px #FDB827;
+    background-color: #ede3d0;
+    margin: 5px; }
+  .teams .green-team {
+    border: solid 2px #003831;
+    background-color: #39988c;
+    margin: 5px; }
+  .teams .orange-team {
+    border: solid 2px #FD5A1E;
+    background-color: #ead3ca;
+    margin: 5px; }
+
+/*# sourceMappingURL=bball.css.map */
