@@ -49,10 +49,10 @@ h3 {
 #logo, #date {
   width: 50%; }
 
-#today, #yesterday {
+#today, #yesterday, #doubleheader {
   width: 400px; }
   @media (max-width: 525px) {
-    #today h2, #yesterday h2 {
+    #today h2, #yesterday h2, #doubleheader h2 {
       font-size: 28px; } }
 
 .game {

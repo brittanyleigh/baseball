@@ -12,17 +12,23 @@ $(document).ready(function() {
   else {
     var scoreDate = year + '' + month + '' + date-1;
   }
-
+  var teamID = $('#selectTeam').val();
+  ajax1();
+ 
+  $('#selectTeam').change(function(){
+    teamID = $(this).val();
+    ajax1();
+  });
 
 
   $('#heading h1').append(today.toDateString());
   $('.teams').hide();
   $('#doubleheader').hide();
-
+function ajax1 (){
 $.ajax
 ({
   type: "GET",
-  url: 'https://www.mysportsfeeds.com/api/feed/pull/mlb/current/full_game_schedule.json?date=today&team=chc',
+  url: 'https://www.mysportsfeeds.com/api/feed/pull/mlb/current/full_game_schedule.json?date=today&team='+ teamID,
   dataType: 'json',
   async: false,
   headers: {
@@ -46,7 +52,7 @@ $.ajax
 
   } // function/success
 }); // ajax call
-
+}
 // todays game - full schedule API
 function displayGame (gameData, game){
     var homeID = gameData.homeTeam.ID;
